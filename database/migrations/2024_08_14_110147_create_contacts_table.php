@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('phone');
             $table->text('planet');
             $table->text('message');
-            $table->tinyInteger('deseo_personal');
+            $table->text('deseo_personal');
             $table->timestamps();
         });
     }
