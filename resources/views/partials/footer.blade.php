@@ -44,10 +44,10 @@
                 <p class="text-light">Pago Seguro</p>
                 <div class="list-group d-flex align-items-start gap-3">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><img src="images/logos/mastercard.svg" alt="mastercard" class="logo-footer"></li>
-                        <li class="list-inline-item"><img src="images/logos/visa.svg" alt="visa" class="logo-footer"></li>
-                        <li class="list-inline-item"><img src="images/logos/americanexp.svg" alt="americanexp" class="logo-footer"></li>
-                        <li class="list-inline-item"><img src="images/logos/paypal.svg" alt="paypal" class="logo-footer"></li>
+                        <li class="list-inline-item"><img src="{{ asset('storage/images/logos/mastercard.svg') }}" alt="mastercard" class="logo-footer"></li>
+                        <li class="list-inline-item"><img src="{{ asset('storage/images/logos/visa.svg') }}" alt="visa" class="logo-footer"></li>
+                        <li class="list-inline-item"><img src="{{ asset('storage/images/logos/americanexp.svg') }}" alt="americanexp" class="logo-footer"></li>
+                        <li class="list-inline-item"><img src="{{ asset('storage/images/logos/paypal.svg') }}" alt="paypal" class="logo-footer"></li>
                     </ul>
                 </div>
             </div>
@@ -55,8 +55,8 @@
                 <h4 class="text-center">Redes</h4>
                 <div class="list-group d-flex align-items-center gap-3">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><img src="images/logos/instagram.svg" alt="logo instagram footer" class="logo-redes-footer"></li>
-                        <li class="list-inline-item"><img src="images/logos/facebook.svg" alt="logo facebook footer" class="logo-redes-footer"></li>
+                        <li class="list-inline-item"><img src="{{ asset('storage/images/logos/instagram.svg') }}" alt="logo instagram footer" class="logo-redes-footer"></li>
+                        <li class="list-inline-item"><img src="{{ asset('storage/images/logos/facebook.svg') }}" alt="logo facebook footer" class="logo-redes-footer"></li>
                     </ul>
                 </div>
             </div>
