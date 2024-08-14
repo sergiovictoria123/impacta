@@ -2,13 +2,13 @@
 @import 'bootstrap/scss/bootstrap';
 
 /* VARIABLES */
-:root{
+:root {
     --color-primary: #e2001a;
     --color-secondary: #001c3a;
 }
 
-// Estilos Globales
-html{
+/* ESTILOS GLOBALES */
+html {
     font-size: 12px;
     overflow-x: hidden;
 }
@@ -23,7 +23,7 @@ body {
     color: var(--color-primary);
 }
 
-// Importar fuentes
+/* IMPORTAR FUENTES */
 @font-face {
     font-family: 'Outfit';
     src: url('/storage/app/public/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
@@ -31,12 +31,12 @@ body {
     font-style: normal;
 }
 
-// Utilidades Personalizadas
+/* UTILIDADES PERSONALIZADAS */
 .h-screen {
     height: 100vh;
 }
 
-// Slider 
+/* ESTILOS SLIDER */
 .slider__header::after {
     content: "";
     position: absolute;
@@ -48,8 +48,7 @@ body {
     z-index: 1;
 }
 
-// Texto descripción slider
-.caption__slider{
+.caption__slider {
     width: 28rem;
     height: 30rem;
     position: relative;
@@ -60,7 +59,7 @@ body {
     z-index: 10;
 }
 
-// Banner top
+/* ESTILOS BANNER */
 .banner__top,
 .banner__bottom {
     background-color: var(--color-primary);
@@ -80,12 +79,6 @@ body {
     max-width: 1300px;
     margin: 0 auto;
 }
-
-// .services__list{
-//     display: flex;
-//     flex-direction: column;
-//     gap: 3rem;
-// }
 
 .services__service {
     padding: 2rem 4rem;
@@ -162,7 +155,7 @@ body {
     -o-border-radius: 1rem;
 }
 
-// Item o enlace del menú
+/* ESTILOS MENÚ */
 .nav__link {
     color: var(--color-primary);
     font-weight: 500;
@@ -182,8 +175,7 @@ body {
 .layout__contact {
     position: relative;
     background-color: var(--color-primary);
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+    padding: 5rem 0;
 }
 
 .form-control::placeholder {
@@ -194,10 +186,6 @@ body {
     background-color: var(--color-primary) !important;
     border: 1px solid #dee2e6;
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     margin-left: 1rem;
     cursor: not-allowed;
 }
@@ -218,9 +206,9 @@ body {
     color: var(--color-primary);
 }
 
-/* BLOQUE DE WAITER*/
+/* BLOQUE DE WAITER */
 .layout__waiter {
-    padding-top: 0px;
+    padding-top: 0;
     margin-top: 0;
 }
 
@@ -235,8 +223,7 @@ body {
     font-weight: 600;
 }
 
-// Estilos Footer
-
+/* ESTILOS FOOTER */
 .layout__footer {
     background-color: var(--color-secondary);
     line-height: 2rem;
