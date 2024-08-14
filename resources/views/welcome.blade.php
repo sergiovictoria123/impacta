@@ -189,6 +189,7 @@
       <div class="container">
         <h4 class="text-light"><strong>ENVIANOS TU</strong> MENSAJE</h4>
         <form action="" method="POST" class="row row-cols-2" autocomplete="off">
+          @csrf
           <div class="row row-cols-2">
             <div class="col-lg-6 col-md-6 col-sm-6">
               <label for="name" class="visually-hidden">Nombre</label>
@@ -196,7 +197,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
               <label for="email" class="visually-hidden">Email</label>
-              <input type="text" class="form-control mb-2" name="email" id="email" placeholder="Email">
+              <input type="email" class="form-control mb-2" name="email" id="email" placeholder="Email">
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
               <label for="phone" class="visually-hidden">Teléfono</label>
@@ -208,7 +209,7 @@
             </div>
             <div class="col-12 mb-5">
               <label for="message" class="visually-hidden">Mensaje</label>
-              <textarea class="form-control mb-3 pb-5" rows="4" id="message" placeholder="Mensaje"></textarea>
+              <textarea class="form-control mb-3 pb-5" rows="4" name="message" id="message" placeholder="Mensaje"></textarea>
               <p class="fs-6 text-light">Sus datos serán tratados por IMPACTA para la atención de las consultas o solicitudes de información realizadas.
                 Puede ejercer sus derechos conforme a lo dispuesto en la Política de Privacidad. Más información aquí.
               </p>
