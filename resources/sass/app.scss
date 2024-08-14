@@ -1,1 +1,257 @@
+// Import Bootstrap SCSS
 @import 'bootstrap/scss/bootstrap';
+
+/* VARIABLES */
+:root{
+    --color-primary: #e2001a;
+    --color-secondary: #001c3a;
+}
+
+// Estilos Globales
+html{
+    font-size: 12px;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-primary);
+}
+
+// Importar fuentes
+@font-face {
+    font-family: 'Outfit';
+    src: url('/storage/app/public/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; // Para soportar la variabilidad en el peso si aplica
+    font-style: normal;
+}
+
+// Utilidades Personalizadas
+.h-screen {
+    height: 100vh;
+}
+
+// Slider 
+.slider__header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #05193799, #004d7a00, var(--color-primary));
+    z-index: 1;
+}
+
+// Texto descripción slider
+.caption__slider{
+    width: 28rem;
+    height: 30rem;
+    position: relative;
+    font-size: 7rem;
+    text-align: left;
+    line-height: 6rem;
+    font-weight: 800;
+    z-index: 10;
+}
+
+// Banner top
+.banner__top,
+.banner__bottom {
+    background-color: var(--color-primary);
+    font-size: 0.8rem;
+}
+
+.banner__bottom a {
+    color: var(--color-primary);
+}
+
+/* ESTILOS BLOQUE SERVICIOS */
+.layout__services {
+    color: var(--color-secondary);
+}
+
+.services__grid {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+// .services__list{
+//     display: flex;
+//     flex-direction: column;
+//     gap: 3rem;
+// }
+
+.services__service {
+    padding: 2rem 4rem;
+    text-align: left;
+}
+
+.services__service__img {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.services__service h4 {
+    font-size: 3.3rem;
+}
+
+.services__service__img::before {
+    position: absolute;
+    top: 5px;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.25);
+    z-index: 2;
+    stroke: white;
+    -webkit-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    -o-transform: scale(0.25);
+}
+
+.services__service__img--first::before {
+    content: url('../../public/storage/images/salud-mental.svg');
+}
+
+.services__service__img--second::before {
+    content: url('../../public/storage/images/esperma.svg');
+}
+
+.services__service__img--third::before {
+    content: url('../../public/storage/images/chincheta.svg');
+}
+
+.services__service__img--fourth::before {
+    content: url('../../public/storage/images/jarro-de-cerveza.svg');
+}
+
+.services__service__img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#c1383899, 90%, var(--color-primary));
+    z-index: 1;
+}
+
+.services__service__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+// Item o enlace del menú
+.nav__link {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.logo_cliente {
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    background: #e32020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ESTILOS FORMULARIO */
+.layout__contact {
+    position: relative;
+    background-color: var(--color-primary);
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+.form-control::placeholder {
+    color: var(--color-primary);
+}
+
+.contact__inputDisabled {
+    background-color: var(--color-primary) !important;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-left: 1rem;
+    cursor: not-allowed;
+}
+
+.contact__inputDisabled::placeholder {
+    color: #ffffff !important;
+}
+
+.form-check-input {
+    width: 22px;
+    height: 22px;
+    padding-right: 5px;
+    background-color: var(--color-primary);
+    border: 1px solid #eee;
+}
+
+.contact__btn {
+    color: var(--color-primary);
+}
+
+/* BLOQUE DE WAITER*/
+.layout__waiter {
+    padding-top: 0px;
+    margin-top: 0;
+}
+
+/* ESTILOS BLOQUE DE CLIENTES */
+.clients__content {
+    background: linear-gradient(0deg, var(--color-primary), 92%, #fba7a7);
+    padding-top: 3rem;
+}
+
+.clients__content h4 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+// Estilos Footer
+
+.layout__footer {
+    background-color: var(--color-secondary);
+    line-height: 2rem;
+}
+
+.layout__footer h4 {
+    color: var(--color-primary);
+}
+
+.logo-footer {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-redes-footer {
+    width: 20px;
+    height: 20px;
+}
