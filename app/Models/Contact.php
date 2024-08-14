@@ -10,5 +10,5 @@ class Contact extends Model
 {
     use CrudTrait;
     use HasFactory;
-    protected $fillable = ["name", "email", "phone", "planet", "message" ,"radio_opcion"];
+    protected $fillable = ["name", "email", "phone", "planet", "message" ,"deseo_personal"];
 }
