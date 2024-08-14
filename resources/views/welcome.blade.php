@@ -188,54 +188,64 @@
     <div class="container-fluid pt-5 border-top">
       <div class="container">
         <h4 class="text-light"><strong>ENVIANOS TU</strong> MENSAJE</h4>
-        <form action="" method="POST" class="row row-cols-2" autocomplete="off">
+        <form action="{{ route('contacts.store') }}" method="POST" class="row row-cols-2" autocomplete="off">
           @csrf
           <div class="row row-cols-2">
             <div class="col-lg-6 col-md-6 col-sm-6">
               <label for="name" class="visually-hidden">Nombre</label>
-              <input type="text" class="form-control mb-2" name="name" id="name" placeholder="Nombre">
+              <input type="text" class="form-control mb-2" name="name" id="name" value="{{ old('name') }}" placeholder="Nombre" required>
+              {!! $errors->first('name', '<small class="text-light">:message</small><br>') !!}
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
               <label for="email" class="visually-hidden">Email</label>
-              <input type="email" class="form-control mb-2" name="email" id="email" placeholder="Email">
+              <input type="email" class="form-control mb-2" name="email" id="email" value="{{ old('email') }}" placeholder="Email" required>
+              {!! $errors->first('email', '<small class="text-light">:message</small><br>') !!}
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
               <label for="phone" class="visually-hidden">Teléfono</label>
-              <input type="text" class="form-control mb-2" name="phone" id="phone" placeholder="Télefono">
+              <input type="text" class="form-control mb-2" name="phone" id="phone" value="{{ old('phone') }}" placeholder="Télefono" required>
+              {!! $errors->first('phone', '<small class="text-light">:message</small><br>') !!}
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
               <label for="planet" class="visually-hidden">Planeta de Nacimiento</label>
-              <input type="text" class="form-control mb-2" name="planet" id="planet" placeholder="Planeta de nacimiento">
+              <input type="text" class="form-control mb-2" name="planet" id="planet" value="{{ old('planet') }}" placeholder="Planeta de nacimiento" required>
+              {!! $errors->first('planet', '<small class="text-light">:message</small><br>') !!}
             </div>
             <div class="col-12 mb-5">
               <label for="message" class="visually-hidden">Mensaje</label>
-              <textarea class="form-control mb-3 pb-5" rows="4" name="message" id="message" placeholder="Mensaje"></textarea>
+              <textarea class="form-control mb-3 pb-5" rows="4" name="message" id="message" value="{{ old('message') }}" placeholder="Mensaje" required></textarea>
+              {!! $errors->first('message', '<small class="text-light">:message</small><br>') !!}
               <p class="fs-6 text-light">Sus datos serán tratados por IMPACTA para la atención de las consultas o solicitudes de información realizadas.
                 Puede ejercer sus derechos conforme a lo dispuesto en la Política de Privacidad. Más información aquí.
               </p>
             </div>
+            @if (session('success'))
+                <div class="alert alert-success text-center">
+                    {{ session('success') }}
+                </div>
+            @endif
           </div>
           <div class="col ms-4 text-light">
             <h5 class="pb-3">SELECCIONA SOLO <strong>UN RESULTADO</strong></h5>
             <div class="form-check mb-3">
-              <input class="form-check-input" type="radio" name="radio_opcion" id="feliz">
-              <input type="text" name="radio_opcion_placeholder1" class="form-control contact__inputDisabled" placeholder="Quiero ser feliz" disabled>
+              <input class="form-check-input" type="radio" name="deseo_personal" id="feliz" value="Quiero ser feliz" required>
+              <input type="text" name="deseo_personal_placeholder1" class="form-control contact__inputDisabled" placeholder="Quiero ser feliz" disabled>
             </div>
             <div class="form-check mb-3">
-              <input class="form-check-input" type="radio" name="radio_opcion" id="rico">
-              <input type="text" name="radio_opcion_placeholder2" class="form-control contact__inputDisabled" placeholder="Quiero ser rico" disabled>
+              <input class="form-check-input" type="radio" name="deseo_personal" id="rico" value="Quiero ser rico">
+              <input type="text" name="deseo_personal_placeholder2" class="form-control contact__inputDisabled" placeholder="Quiero ser rico" disabled>
             </div>
             <div class="form-check mb-3">
-              <input class="form-check-input" type="radio" name="radio_opcion" id="avión">
-              <input type="text" name="radio_opcion_placeholder3" class="form-control contact__inputDisabled" placeholder="Quiero ser un avión" disabled>
+              <input class="form-check-input" type="radio" name="deseo_personal" id="avión" value="Quiero ser un avión">
+              <input type="text" name="deseo_personal_placeholder3" class="form-control contact__inputDisabled" placeholder="Quiero ser un avión" disabled>
             </div>
             <div class="form-check mb-3 pb-5">
-              <input class="form-check-input" type="radio" name="radio_opcion" id="dormir">
-              <input type="text" name="radio_opcion_placeholder4" class="form-control contact__inputDisabled" placeholder="Quiero dormir todo el día" disabled>
+              <input class="form-check-input" type="radio" name="deseo_personal" id="dormir" value="Quiero dormir todo el día">
+              <input type="text" name="deseo_personal_placeholder4" class="form-control contact__inputDisabled" placeholder="Quiero dormir todo el día" disabled>
             </div>
             <div class="row row-cols-2">
               <div class="form-check">
-                <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input border" type="checkbox" value="" id="flexCheckDefault" required>
                 <label class="form-check-label ms-2 fs-5" for="flexCheckDefault">
                   He leído y acepto <strong>el aviso legal</strong> y la <strong>política de privacidad</strong>
                 </label>
