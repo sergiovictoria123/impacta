@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+  @if (session('success'))
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        Swal.fire({
+            title: 'Éxito',
+            text: "{{ session('success') }}",
+            icon: 'success'
+        });
+      });
+    </script>
+  @endif
   <!--CAROUSEL-->
   <section class="layout__slider">
     <div id="carouselExampleIndicators" class="carousel slide slider__header" data-bs-ride="true">
@@ -219,11 +230,6 @@
                 Puede ejercer sus derechos conforme a lo dispuesto en la Política de Privacidad. Más información aquí.
               </p>
             </div>
-            @if (session('success'))
-                <div class="alert alert-success text-center">
-                    {{ session('success') }}
-                </div>
-            @endif
           </div>
           <div class="col ms-4 text-light">
             <h5 class="pb-3">SELECCIONA SOLO <strong>UN RESULTADO</strong></h5>
