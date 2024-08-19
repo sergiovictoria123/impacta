@@ -30,21 +30,21 @@
         <div class="carousel-item">
           <img src="{{ asset('storage/images/portada/portada2.webp') }}" class="d-block w-100" alt="Imagen carrusel 2">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
+            <h1 class="caption__slider">A veces, somos gente normal</h1>
             <p>Some representative placeholder content for the second slide.</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="{{ asset('storage/images/portada/portada3.webp') }}" class="d-block w-100" alt="Imagen carrusel 3">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
+            <h1 class="caption__slider">A veces, somos gente normal</h1>
             <p>Some representative placeholder content for the third slide.</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="{{ asset('storage/images/portada/portada4.webp') }}" class="d-block w-100" alt="Imagen carrusel 4">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Fourth slide label</h5>
+            <h1 class="caption__slider">A veces, somos gente normal</h1>
             <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
@@ -69,7 +69,7 @@
           <div class="services__service__img services__service__img--first">
             <img src="storage/images/digital-brain.jpg" alt="Imagen brain">            
           </div>
-          <h4 class="fw-bold p-3">CREATIVIDAD SIN LIMITES PARA IMPULSAR TU MARCA</h4>
+          <h2 class="h4 fw-bold p-3">CREATIVIDAD SIN LIMITES PARA IMPULSAR TU MARCA</h2>
           <p class="fs-5 p-3">Transformamos ideas en <b>experiencias inolvidables</b>, creando campañas
             que capturan la esencia de tu marca y resuenan profundamente con tu
             audiencia.
@@ -80,7 +80,7 @@
           <div class="services__service__img services__service__img--second">
             <img src="storage/images/dartboard.jpg" alt="Imagen dartboard">
           </div>
-          <h4 class="fw-bold p-3">AGILIDAD Y EFICIENCIA EN CADA PROYECTO</h4>
+          <h2 class="h4 fw-bold p-3">AGILIDAD Y EFICIENCIA EN CADA PROYECTO</h2>
           <p class="fs-5 p-3"><b>Respuesta rápida y eficiente</b> para un mercado en constante cambio,
             adaptándonos a tus necesidades y superando tus expectativas con cada
             entrega.
@@ -91,7 +91,7 @@
           <div class="services__service__img services__service__img--third">
             <img src="storage/images/cyber-woman.jpg" alt="Imagen cyber woman">
           </div>
-          <h4 class="fw-bold p-3">TECNOLOGÍA PARA RESULTADOS ÓPTIMOS</h4>
+          <h2 class="h4 fw-bold p-3">TECNOLOGÍA PARA RESULTADOS ÓPTIMOS</h2>
           <p class="fs-5 p-3">Innovación tecnológica para potenciar tus campañas publicitarias,
             utilizando <b>las herramientas más avanzadas</b> para alcanzar y superar tus
             objetivos.
@@ -102,7 +102,7 @@
           <div class="services__service__img services__service__img--fourth">
             <img src="storage/images/powerful-partnership.jpg" alt="Imagen powerful partnership">
           </div>
-          <h4 class="fw-bold p-3">EQUIPO DE EXPERTOS APASIONADOS Y DEDICADOS</h4>
+          <h2 class="h4 fw-bold p-3">EQUIPO DE EXPERTOS APASIONADOS Y DEDICADOS</h2>
           <p class="fs-5 p-3">Profesionales apasionados dedicados a impulsar tu marca, combinando
             talento y experiencia para ofrecer<b> resultados excepcionales y transformar
             tu visión en realidad.</b>
@@ -128,7 +128,7 @@
   <section class="layout__clients">
     <div class="container-fluid clients__content" style="padding-top: 140px 0;">
       <div class="row text-center d-flex justify-content-center align-items-center pb-5 pt-5">
-        <h4 class="text-light p-2 mt-5">¿NUESTROS CLIENTES?</h4>
+        <h3 class="text-light p-2 mt-5">¿NUESTROS CLIENTES?</h3>
         <div class="col-auto">
           <div class="logo_cliente">
             <img src="/storage/images/logos/alcampo.svg" class="img-fluid" alt="logo alcampo" width="80px">
