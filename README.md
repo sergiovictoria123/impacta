@@ -19,181 +19,79 @@ Plantillas: Se han creado vistas individuales para cada enlace del menú horizon
 
 ## Estructura del proyecto
 - Controladores y modelos generados por Backpack para el CRUD de contactos y usuarios.
-📦app
- ┣ 📂Http
- ┃ ┣ 📂Controllers
- ┃ ┃ ┣ 📂Admin
- ┃ ┃ ┃ ┣ 📜ContactCrudController.php
- ┃ ┃ ┃ ┗ 📜UserCrudController.php
- ┃ ┃ ┣ 📜ContactsController.php
- ┃ ┃ ┗ 📜Controller.php
- ┃ ┣ 📂Middleware
- ┃ ┃ ┗ 📜CheckIfAdmin.php
- ┃ ┗ 📂Requests
- ┃ ┃ ┣ 📜ContactRequest.php
- ┃ ┃ ┗ 📜UserRequest.php
- ┣ 📂Models
- ┃ ┣ 📜Contact.php
- ┃ ┗ 📜User.php
- ┗ 📂Providers
- ┃ ┗ 📜AppServiceProvider.php
+.
+|-- README.md
+|-- app
+|   |-- Http
+|   |   |-- Controllers
+|   |   |-- Middleware
+|   |   `-- Requests
+|   |-- Models
+|   |   |-- Contact.php
+|   |   `-- User.php
+|   `-- Providers
+|       `-- AppServiceProvider.php
 
 - Migraciones y seeders para los datos de prueba
- 📦database
- ┣ 📂factories
- ┃ ┗ 📜UserFactory.php
- ┣ 📂migrations
- ┃ ┣ 📜0001_01_01_000000_create_users_table.php
- ┃ ┣ 📜0001_01_01_000001_create_cache_table.php
- ┃ ┣ 📜0001_01_01_000002_create_jobs_table.php
- ┃ ┗ 📜2024_08_14_110147_create_contacts_table.php
- ┣ 📂seeders
- ┃ ┣ 📜ContactsTableSeeder.php
- ┃ ┗ 📜DatabaseSeeder.php
- ┣ 📜.gitignore
- ┗ 📜database.sqlite
+|-- database
+|   |-- database.sqlite
+|   |-- factories
+|   |   `-- UserFactory.php
+|   |-- migrations
+|   |   |-- 0001_01_01_000000_create_users_table.php
+|   |   |-- 0001_01_01_000001_create_cache_table.php
+|   |   |-- 0001_01_01_000002_create_jobs_table.php
+|   |   `-- 2024_08_14_110147_create_contacts_table.php
+|   `-- seeders
+|       |-- ContactsTableSeeder.php
+|       `-- DatabaseSeeder.php
 
 - Carpeta public con las imágenes usadas para crear la landing y generadas por backpack
- 📦public
- ┣ 📂storage
- ┃ ┣ 📂basset
- ┃ ┃ ┣ 📂vendor
- ┃ ┃ ┃ ┗ 📂backpack
- ┃ ┃ ┃ ┃ ┣ 📂basset
- ┃ ┃ ┃ ┃ ┃ ┗ 📂tests
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂Helpers
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜basset-test.js
- ┃ ┃ ┃ ┃ ┣ 📂crud
- ┃ ┃ ┃ ┃ ┃ ┗ 📂src
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂resources
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂assets
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂css
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜common.css
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂img
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜spinner.svg
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂js
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜common.js
- ┃ ┃ ┃ ┃ ┗ 📂theme-tabler
- ┃ ┃ ┃ ┃ ┃ ┗ 📂resources
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂assets
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂css
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜color-adjustments.css
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜colors.css
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜style.css
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂js
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜tabler.js
- ┃ ┃ ┗ 📜.basset
- ┃ ┣ 📂fonts
- ┃ ┃ ┣ 📂outfit
- ┃ ┃ ┃ ┣ 📂static
- ┃ ┃ ┃ ┃ ┣ 📜Outfit-Black.ttf
- ┃ ┃ ┃ ┃ ┣ 📜Outfit-Bold.ttf
- ┃ ┃ ┃ ┃ ┣ 📜Outfit-ExtraBold.ttf
- ┃ ┃ ┃ ┃ ┣ 📜Outfit-ExtraLight.ttf
- ┃ ┃ ┃ ┃ ┣ 📜Outfit-Light.ttf
- ┃ ┃ ┃ ┃ ┣ 📜Outfit-Medium.ttf
- ┃ ┃ ┃ ┃ ┣ 📜Outfit-Regular.ttf
- ┃ ┃ ┃ ┃ ┣ 📜Outfit-SemiBold.ttf
- ┃ ┃ ┃ ┃ ┗ 📜Outfit-Thin.ttf
- ┃ ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┃ ┣ 📜OFL.txt
- ┃ ┃ ┃ ┣ 📜Outfit-VariableFont_wght.ttf
- ┃ ┃ ┃ ┗ 📜README.txt
- ┃ ┃ ┗ 📜.DS_Store
- ┃ ┣ 📂images
- ┃ ┃ ┣ 📂iconos
- ┃ ┃ ┃ ┗ 📜favicon.ico
- ┃ ┃ ┣ 📂logos
- ┃ ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┃ ┣ 📜alcampo.svg
- ┃ ┃ ┃ ┣ 📜americanexp.svg
- ┃ ┃ ┃ ┣ 📜basf.svg
- ┃ ┃ ┃ ┣ 📜bmi.svg
- ┃ ┃ ┃ ┣ 📜brita.svg
- ┃ ┃ ┃ ┣ 📜broseta.svg
- ┃ ┃ ┃ ┣ 📜cajamar.svg
- ┃ ┃ ┃ ┣ 📜cepsa.svg
- ┃ ┃ ┃ ┣ 📜corporateexcellence.svg
- ┃ ┃ ┃ ┣ 📜facebook.svg
- ┃ ┃ ┃ ┣ 📜facebook_nav.svg
- ┃ ┃ ┃ ┣ 📜ferrovial.svg
- ┃ ┃ ┃ ┣ 📜hill.svg
- ┃ ┃ ┃ ┣ 📜impacta1.svg
- ┃ ┃ ┃ ┣ 📜impacta2.svg
- ┃ ┃ ┃ ┣ 📜instagram.svg
- ┃ ┃ ┃ ┣ 📜instagram_nav.svg
- ┃ ┃ ┃ ┣ 📜kpmg.svg
- ┃ ┃ ┃ ┣ 📜mastercard.svg
- ┃ ┃ ┃ ┣ 📜paypal.svg
- ┃ ┃ ┃ ┣ 📜schneider.svg
- ┃ ┃ ┃ ┗ 📜visa.svg
- ┃ ┃ ┣ 📂portada
- ┃ ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┃ ┣ 📜portada1.webp
- ┃ ┃ ┃ ┣ 📜portada2.webp
- ┃ ┃ ┃ ┣ 📜portada3.webp
- ┃ ┃ ┃ ┗ 📜portada4.webp
- ┃ ┃ ┣ 📜.DS_Store
- ┃ ┃ ┣ 📜chincheta.svg
- ┃ ┃ ┣ 📜cyber-woman.jpg
- ┃ ┃ ┣ 📜dartboard.jpg
- ┃ ┃ ┣ 📜digital-brain.jpg
- ┃ ┃ ┣ 📜esperma.svg
- ┃ ┃ ┣ 📜impacta_waiter.png
- ┃ ┃ ┣ 📜jarro-de-cerveza.svg
- ┃ ┃ ┣ 📜powerful-partnership.jpg
- ┃ ┃ ┗ 📜salud-mental.svg
- ┃ ┣ 📜.DS_Store
- ┃ ┗ 📜.gitignore
- ┣ 📜.htaccess
- ┣ 📜android-chrome-192x192.png
- ┣ 📜android-chrome-512x512.png
- ┣ 📜apple-touch-icon.png
- ┣ 📜favicon-16x16.png
- ┣ 📜favicon-32x32.png
- ┣ 📜favicon.ico
- ┣ 📜index.php
- ┣ 📜mstile-144x144.png
- ┣ 📜mstile-150x150.png
- ┣ 📜mstile-310x150.png
- ┣ 📜mstile-310x310.png
- ┣ 📜mstile-70x70.png
- ┣ 📜robots.txt
- ┗ 📜safari-pinned-tab.svg
+ |-- public
+|   |-- android-chrome-192x192.png
+|   |-- android-chrome-512x512.png
+|   |-- apple-touch-icon.png
+|   |-- build
+|   |   |-- assets
+|   |   `-- manifest.json
+|   |-- favicon-16x16.png
+|   |-- favicon-32x32.png
+|   |-- favicon.ico
+|   |-- index.php
+|   |-- mstile-144x144.png
+|   |-- mstile-150x150.png
+|   |-- mstile-310x150.png
+|   |-- mstile-310x310.png
+|   |-- mstile-70x70.png
+|   |-- robots.txt
+|   |-- safari-pinned-tab.svg
+|   `-- storage -> /Users/sergiov/Proyectos/impacta/storage/app/public
 
 - Vistas creadas para el proyecto y generadas por backpack
- 📦resources
- ┣ 📂css
- ┃ ┗ 📜app.css
- ┣ 📂js
- ┃ ┣ 📜app.js
- ┃ ┗ 📜bootstrap.js
- ┣ 📂sass
- ┃ ┗ 📜app.scss
- ┣ 📂views
- ┃ ┣ 📂layouts
- ┃ ┃ ┗ 📜app.blade.php
- ┃ ┣ 📂partials
- ┃ ┃ ┣ 📜footer.blade.php
- ┃ ┃ ┗ 📜nav.blade.php
- ┃ ┣ 📂vendor
- ┃ ┃ ┗ 📂backpack
- ┃ ┃ ┃ ┗ 📂ui
- ┃ ┃ ┃ ┃ ┗ 📂inc
- ┃ ┃ ┃ ┃ ┃ ┗ 📜menu_items.blade.php
- ┃ ┣ 📜about.blade.php
- ┃ ┣ 📜contact.blade.php
- ┃ ┣ 📜projects.blade.php
- ┃ ┣ 📜services.blade.php
- ┃ ┗ 📜welcome.blade.php
- ┗ 📜.DS_Store
+|-- resources
+|   |-- css
+|   |   `-- app.css
+|   |-- js
+|   |   |-- app.js
+|   |   `-- bootstrap.js
+|   |-- sass
+|   |   `-- app.scss
+|   `-- views
+|       |-- about.blade.php
+|       |-- contact.blade.php
+|       |-- layouts
+|       |-- partials
+|       |-- projects.blade.php
+|       |-- services.blade.php
+|       |-- vendor
+|       `-- welcome.blade.php
 
 - Rutas web hacía las vistas y para almacenar los datos del formulario
- 📦routes
- ┣ 📂backpack
- ┃ ┗ 📜custom.php
- ┣ 📜console.php
- ┗ 📜web.php
+|-- routes
+|   |-- backpack
+|   |   `-- custom.php
+|   |-- console.php
+|   `-- web.php
 
 ## Requisitos Previos
 - PHP >= 8.0
